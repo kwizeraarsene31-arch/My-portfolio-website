@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — KWIZERA Aime Arsene</title>
+  <meta name="description" content="Projects by KWIZERA Aime Arsene — portfolio projects.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">KWIZERA Aime Arsene</a>
+      <button id="menuToggle" class="menu-toggle" aria-controls="navList" aria-expanded="false">☰</button>
+      <nav id="navList" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false">🌓</button>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="content-section">
+      <h1>Projects</h1>
+      <p class="muted">Here are some of the projects I’ve built.</p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="web.jpeg" alt="Portfolio project illustration" loading="lazy">
+          <div class="project-body">
+            <h3>Portfolio Website</h3>
+            <p>A responsive and clean portfolio built with HTML, CSS, and vanilla JavaScript. Includes dark mode, animations and more.</p>
+            <div class="project-actions">
+              <a class="btn primary" href="index.html">View</a>
+              <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Example placeholder for future projects -->
+        <article class="project-card placeholder">
+          <img src="https://via.placeholder.com/600x350?text=More+Projects+Coming" alt="Coming soon" loading="lazy">
+          <div class="project-body">
+            <h3>Coming Soon</h3>
+            <p>More projects will be displayed here as I build them.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="yearProjects"></span> KWIZERA Aime Arsene</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

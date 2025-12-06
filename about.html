@@ -1,242 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KWIZERA Aime Arsene | Portfolio - About Me</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Dark Mode Toggle Button */
-        .theme-toggle-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
-        }
-
-        .theme-toggle-btn:hover {
-            background-color: #2980b9;
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
-        }
-
-        /* Light Mode (Default) */
-        body.light-mode {
-            background-color: #ffffff;
-            color: #333;
-        }
-
-        body.light-mode nav {
-            background-color: #2c3e50;
-            color: white;
-        }
-
-        body.light-mode nav a {
-            color: white;
-        }
-
-        body.light-mode nav a:hover {
-            color: #3498db;
-        }
-
-        body.light-mode section {
-            background-color: #ffffff;
-        }
-
-        body.light-mode section h2 {
-            color: #2c3e50;
-        }
-
-        /* Dark Mode */
-        body.dark-mode {
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
-
-        body.dark-mode nav {
-            background-color: #1a1a1a;
-            color: white;
-        }
-
-        body.dark-mode nav a {
-            color: #ffffff;
-        }
-
-        body.dark-mode nav a:hover {
-            color: #3498db;
-        }
-
-        body.dark-mode section {
-            background-color: #0a0a0a;
-        }
-
-        body.dark-mode section h2 {
-            color: #ffffff;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #2c3e50;
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        nav h2 {
-            font-size: 1.5rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-            animation: smoothFadeInScale 0.6s ease-out both;
-        }
-
-        nav a:nth-child(1) { animation-delay: 0.1s; }
-        nav a:nth-child(2) { animation-delay: 0.2s; }
-        nav a:nth-child(3) { animation-delay: 0.3s; }
-        nav a:nth-child(4) { animation-delay: 0.4s; }
-
-        nav a:hover {
-            color: #3498db;
-        }
-
-        section {
-            padding: 3rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5rem;
-            animation: fadeInUp 0.8s ease-out;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        body.dark-mode section h2 {
-            color: #ffffff;
-        }
-
-        section p {
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        /* PREMIUM ANIMATIONS */
-        @keyframes smoothFadeInScale {
-            0% {
-                opacity: 0;
-                transform: scale(0.95) translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — KWIZERA Aime Arsene</title>
+  <meta name="description" content="About me — KWIZERA Aime Arsene, student and aspiring developer.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <!-- Navigation -->
-    <nav>
-        <h2>KWIZERA Aime Arsene</h2>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">KWIZERA Aime Arsene</a>
+      <button id="menuToggle" class="menu-toggle" aria-controls="navList" aria-expanded="false">☰</button>
+      <nav id="navList" class="primary-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false">🌓</button>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate student with a clear goal: to become the best software engineer. I'm constantly learning new technologies and building projects to improve my skills. I started studying coding 2 months ago here at NLS, starting from HTML to CSS then to Javascript. Step by step I started gaining some knowledge on each part of the codes.</p>
+  <main class="container main">
+    <section class="content-section">
+      <h1>About Me</h1>
+      <div class="about-grid">
+        <img src="https://i.postimg.cc/8ctHCyxK/1D3A5080.jpg" alt="Portrait of KWIZERA Aime Arsene" class="profile-photo about-photo" width="360" height="360">
+
+        <div class="about-text">
+          <p>I’m a student learning front-end development using HTML, CSS, and JavaScript. I’m passionate about building clean, responsive, and accessible web applications.</p>
+          <h3>Skills & Focus</h3>
+          <ul>
+            <li>Front-end development (HTML, CSS, JS)</li>
+            <li>Responsive & accessible design</li>
+            <li>Project-based learning & problem solving</li>
+          </ul>
+          <p>If you’d like to collaborate, mentor me, or give feedback — <a href="contact.html">get in touch</a>.</p>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <script>
-        // ===== DARK MODE TOGGLE =====
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="yearAbout"></span> KWIZERA Aime Arsene</p>
+    </div>
+  </footer>
 
-        // Initialize theme
-        const savedTheme = localStorage.getItem('theme') || 'light-mode';
-        body.classList.add(savedTheme);
-        updateButtonText();
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
-        // Toggle theme
-        themeToggle.addEventListener('click', function() {
-            console.log('Button clicked!');
-
-            if (body.classList.contains('dark-mode')) {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-                localStorage.setItem('theme', 'light-mode');
-                console.log('Switched to light mode');
-            } else {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark-mode');
-                console.log('Switched to dark mode');
-            }
-            updateButtonText();
-        });
-
-        function updateButtonText() {
-            if (body.classList.contains('dark-mode')) {
-                themeToggle.textContent = '☀️ Light Mode';
-            } else {
-                themeToggle.textContent = '🌙 Dark Mode';
-            }
-        }
-    </script>
+  <script src="script.js" defer></script>
 </body>
 </html>

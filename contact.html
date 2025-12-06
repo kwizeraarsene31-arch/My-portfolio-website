@@ -1,224 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KWIZERA Aime Arsene | Portfolio - Contact</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Dark Mode Toggle Button */
-        .theme-toggle-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
-        }
-
-        .theme-toggle-btn:hover {
-            background-color: #2980b9;
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
-        }
-
-        /* Light Mode (Default) */
-        body.light-mode {
-            background-color: #ffffff;
-            color: #333;
-        }
-
-        body.light-mode nav {
-            background-color: #2c3e50;
-            color: white;
-        }
-
-        body.light-mode nav a {
-            color: white;
-        }
-
-        body.light-mode nav a:hover {
-            color: #3498db;
-        }
-
-        body.light-mode section {
-            background-color: #ffffff;
-        }
-
-        body.light-mode section h2 {
-            color: #2c3e50;
-        }
-
-        body.light-mode #contact {
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        /* Dark Mode */
-        body.dark-mode {
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
-
-        body.dark-mode nav {
-            background-color: #1a1a1a;
-            color: white;
-        }
-
-        body.dark-mode nav a {
-            color: #ffffff;
-        }
-
-        body.dark-mode nav a:hover {
-            color: #3498db;
-        }
-
-        body.dark-mode section {
-            background-color: #0a0a0a;
-        }
-
-        body.dark-mode section h2 {
-            color: #ffffff;
-        }
-
-        body.dark-mode #contact {
-            background-color: #1a1a1a;
-            color: #ffffff;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #2c3e50;
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        nav h2 {
-            font-size: 1.5rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-            animation: smoothFadeInScale 0.6s ease-out both;
-        }
-
-        nav a:nth-child(1) { animation-delay: 0.1s; }
-        nav a:nth-child(2) { animation-delay: 0.2s; }
-        nav a:nth-child(3) { animation-delay: 0.3s; }
-        nav a:nth-child(4) { animation-delay: 0.4s; }
-
-        nav a:hover {
-            color: #3498db;
-        }
-
-        section {
-            padding: 3rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5rem;
-            animation: fadeInUp 0.8s ease-out;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        body.dark-mode section h2 {
-            color: #ffffff;
-        }
-
-        #contact {
-            background-color: #f8f9fa;
-            text-align: center;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        #contact p {
-            font-size: 1.1rem;
-            margin: 0.5rem 0;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        /* PREMIUM ANIMATIONS */
-        @keyframes smoothFadeInScale {
-            0% {
-                opacity: 0;
-                transform: scale(0.95) translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — KWIZERA Aime Arsene</title>
+  <meta name="description" content="Contact and feedback form — KWIZERA Aime Arsene.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <!-- Navigation -->
-    <nav>
-        <h2>KWIZERA Aime Arsene</h2>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">KWIZERA Aime Arsene</a>
+      <button id="menuToggle" class="menu-toggle" aria-controls="navList" aria-expanded="false">☰</button>
+      <nav id="navList" class="primary-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-pressed="false">🌓</button>
+    </div>
+  </header>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>Email: KWIZERA.arsene31@ntare-louisenlund.org</p>
-        <p>Or: aimearsene36@gmail.com</p>
+  <main class="container main">
+    <section class="content-section">
+      <h1>Contact Me</h1>
+      <p class="muted">Feel free to send me an email or feedback via the form below.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:KWIZERA.arsene31@ntare-louisenlund.org">KWIZERA.arsene31@ntare-louisenlund.org</a></p>
+          <p><a href="mailto:aimearsene36@gmail.com">aimearsene36@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Social</h3>
+          <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          <p><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+      </div>
     </section>
+
+    <section class="content-section">
+      <h2>Send Feedback / Message</h2>
+      <form id="feedbackForm" class="feedback-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+        <label>
+          <span>Your Name</span>
+          <input name="name" type="text" required placeholder="Your name">
+        </label>
+        <label>
+          <span>Your Email</span>
+          <input name="email" type="email" required placeholder="you@example.com">
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required placeholder="Your message..."></textarea>
+        </label>
+        <div class="form-row">
+          <button type="submit" class="btn primary">Send</button>
+          <button type="button" id="clearForm" class="btn ghost">Clear</button>
+        </div>
+        <p class="muted small">If you don’t set up Formspree, the form will fallback to your email client.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="yearContact"></span> KWIZERA Aime Arsene</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
